@@ -12,7 +12,7 @@ public class CommentService {
 
   private final CommentRepository commentRepository;
 
-  public Page<Comment> getAllByTopicId(Long topicId, Pageable pageable){
+  public Page<Comment> getAllByTopicId(Integer topicId, Pageable pageable){
     return commentRepository.findByTopic_id(topicId, pageable);
   }
 

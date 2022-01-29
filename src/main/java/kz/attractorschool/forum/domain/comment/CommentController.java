@@ -15,7 +15,7 @@ public class CommentController {
   private final CommentService cartService;
 
   @GetMapping
-  public Page<Comment> getCommentsBy(Long topicId, Pageable pageable) {
+  public Page<Comment> getCommentsBy(Integer topicId, Pageable pageable) {
     return cartService.getAllByTopicId(topicId, pageable);
   }
 }

@@ -1,8 +1,10 @@
 package kz.attractorschool.forum.domain.comment;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import kz.attractorschool.forum.domain.topic.Topic;
 import kz.attractorschool.forum.domain.user.User;
 import lombok.Data;
+import lombok.ToString;
 import lombok.experimental.Accessors;
 
 import java.time.LocalDateTime;
@@ -31,6 +33,8 @@ public class Comment {
     private LocalDateTime createdAt;
 
     @ManyToOne
+    @ToString.Exclude
+    @JsonBackReference
     private Topic topic;
 
     private String content;

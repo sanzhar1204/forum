@@ -41,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .invalidateHttpSession(true);
 
         http.authorizeRequests()
-            .antMatchers("/**").permitAll()//TODO add only users
+            .antMatchers("/users/**").permitAll()
             .antMatchers("/css/**").permitAll()
             .antMatchers("/js/**").permitAll()
             .antMatchers("/img/**").permitAll()

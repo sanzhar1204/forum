@@ -15,8 +15,11 @@ public class TopicController {
   private final TopicService topicService;
 
   @GetMapping
-  public Page<Topic> getAll(Pageable pageable){
-    return topicService.getAll(pageable);
+  public Page<TopicDto> getAll(Pageable pageable){
+    return topicService.getAll(pageable).map(topic -> new TopicDto()
+        .setTopic(topic)
+        .setCommentsCount(topic.getComments().size())
+    );
   }
 
 }

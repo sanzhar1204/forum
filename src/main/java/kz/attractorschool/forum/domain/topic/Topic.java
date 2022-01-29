@@ -1,5 +1,6 @@
 package kz.attractorschool.forum.domain.topic;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import kz.attractorschool.forum.domain.comment.Comment;
 import kz.attractorschool.forum.domain.user.User;
 import lombok.Data;
@@ -37,5 +38,6 @@ public class Topic {
 
     @OneToMany(cascade = {CascadeType.ALL})
     @JoinColumn(name = "topic_id")
+    @JsonBackReference
     private List<Comment> comments;
 }

@@ -14,6 +14,5 @@ public class UserRegistrationForm {
   private String email;
 
   @NotBlank
-  @Size(min = 8)
   private String password;
 }
