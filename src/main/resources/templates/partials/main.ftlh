@@ -26,7 +26,7 @@
     <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/">Главная</a>
-        <a class="navbar-brand" href="/">Создать тему</a>
+        <a class="navbar-brand" href="/topics/create">Создать тему</a>
         <a class="navbar-brand ml-auto" href="/users/login">Вход</a>
         <a class="navbar-brand" href="/users/register">Регистрация</a>
         <form action="/logout" method="post">
