@@ -1,6 +1,8 @@
 "use strict";
 
-function refreshComments(topicId){
+window.onload = refreshComments();
+
+function refreshComments(){
     $('#pagination').pagination({
         dataSource: `/api/comments?topicId=${topicId}&sort=createdAt,asc`,
         locator: 'content',

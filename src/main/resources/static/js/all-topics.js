@@ -1,6 +1,6 @@
 "use strict";
 
-refreshAllTopics();
+window.onload = refreshAllTopics();
 
 function refreshAllTopics(){
     $('#pagination').pagination({
