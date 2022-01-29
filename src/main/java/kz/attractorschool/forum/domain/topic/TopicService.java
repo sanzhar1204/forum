@@ -1,5 +1,6 @@
 package kz.attractorschool.forum.domain.topic;
 
+import kz.attractorschool.forum.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -16,4 +17,7 @@ public class TopicService {
     return topicRepository.findAll(pageable);
   }
 
+  public Topic getBy(Integer id) {
+    return topicRepository.findById(id).orElseThrow(ResourceNotFoundException::new);
+  }
 }

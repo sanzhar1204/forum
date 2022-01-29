@@ -1,4 +1,4 @@
-<#macro renderWith title="Welcome to Forum!" scripts=[] styles=[]>
+<#macro renderWith title="Welcome to Forum!" scripts=[] styles=[] scriptsBefore=[]>
     <!doctype html>
     <html lang="en">
     <head>
@@ -36,6 +36,11 @@
         <button class="navbar-brand btn btn-link" type="submit">Выйти </button>
         </form>
     </nav>
+
+
+    <#list scriptsBefore as scriptSource>
+        <script src="${scriptSource}"></script>
+    </#list>
 
     <div class="container-fluid">
         <#nested>
